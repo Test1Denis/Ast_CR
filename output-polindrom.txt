@@ -1,0 +1,10 @@
+12321 - polindrom 
+1221 - polindrom 
+132 - not polindrom 
+123432 - not polindrom 
+12345 - not polindrom 
+1 - polindrom 
+12344321 - polindrom 
+987654 - not polindrom 
+12345 - not polindrom 
+23333332 - polindrom 
