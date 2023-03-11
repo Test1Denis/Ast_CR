@@ -2,28 +2,29 @@
 #include <fstream>
 #include <string>
 int main(){
-	FILE* input;
-	FILE* output;
+        FILE* input;
+        FILE* output;
 
-	int n;
-	std::cin >> n;
-	std::cout << isPolindrom(n) << std::endl;
-	
-	input = fopen("input-polindrom.txt", "r");
-	output = fopen("output-polindrom.txt", "w");
-	int num;
-	for(int i = 0; i < 10; i++){
-		fscanf(input, "%d", &num);
-		if(isPolindrom(num) == true){
-			fprintf(output, "%d%s\n", num, " - polindrom ");
-		}
-		else{
-			fprintf(output, "%d%s\n", num, " - not polindrom ");
-		}
-	}
+        int n;
+        std::cin >> n;
+        std::cout << isPolindrom(n) << std::endl;
 
-	fclose(input);
-	fclose(output);
+        input = fopen("input-polindrom.txt", "r");
+        output = fopen("output-polindrom.txt", "w");
+        int num;
+        while(!feof(input)){
+                fscanf(input, "%d", &num);
+                if(isPolindrom(num) == true){
+                        fprintf(output, "%d%s\n", num, " - polindrom ");
+                }
+                else{
+                        fprintf(output, "%d%s\n", num, " - not polindrom ");
+                }
+        }
 
-	return 0;
+        fclose(input);
+        fclose(output);
+
+        return 0;
 }
+
