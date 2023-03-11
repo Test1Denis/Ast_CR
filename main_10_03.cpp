@@ -21,12 +21,6 @@ int main(){
 			fprintf(output, "%d%s\n", num, " - not polindrom ");
 		}
 	}
-				
-	
-//	std::ifstream input("input-polindrom.txt"); //Открываешь первый файл для чтения
-//    	std::ofstream output("output-polindrom.txt"); //Открываешь второй файл для записи
-//    	output << input.rdbuf(); //Копируешь буфер файлового потока ввода (input) в файловый поток вывода (output)
-//    	while(std::getline(input, str)){  
 
 	fclose(input);
 	fclose(output);
