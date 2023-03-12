@@ -1,16 +1,25 @@
 #include "polindrom.hpp"
 
-int reversNum(int num){
-	int rez = 0;
+bool reversNum(int num){
+	int res = 0;
 	while(num){
-		rez *= 10;
-		rez += num%10;
+		res *= 10;
+		res += num % 10;
 		num /= 10;
 	}
-	return rez;
+	//return res;
+	return res == num;
 }
 bool isPolindrom(int num){
-	if(num == reversNum(num)) return true;
-	else{ return false; }	
+	return reversNum(num);
+
+
+
+
+	if(num == reversNum(num)) 
+		return true;
+	else{ -- говорил что else уже не нужен
+		return false; 
+	}	
 
 }
